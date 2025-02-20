@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        li {
+            line-height: 32px;
+            list-style-position: outside;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>What is A JavaScript function</h1>
+        <p>It is a block of code designed to perform a particular task and it is executed when we call it.</p>
+        <p>Functions allow us to encapsulate reusable code and execute it as needed.</p>
+        <ul>
+            <li>A function in JavaScript is defined using the function keyword</li>
+            <li>Function naming follows the same rules of Variable naming.</li>
+            <li>Passing Parameters: <br>Functions can take parameters, which are used as variables inside the function.
+            </li>
+        </ul>
+    </div>
+    <script>
+        //Define and call your first function
+        function fun1() {
+            console.log('This is my first JS function')
+        }
+        //To (excute, invoke, call or run) the function just write its name
+        fun1();
+        fun1();
+        fun1();
+        fun1();
+
+        //Passing Parameter
+        function userName(name) {
+            console.log(`Hello ${name}`)
+            console.log('Hello' + name)
+        }
+        userName("Shehab")
+        userName("Ahmed")
+        userName(25)
+
+
+        function juiceMix(apples, oranges) {
+            const theJuice = `This juice was made by ${apples} apples, and ${oranges} oranges`;
+            return theJuice;
+        }
+        // juiceMix(3, 0);
+        const testReturn = juiceMix(3, 0);
+        console.log(testReturn);
+    </script>
+</body>
+
+</html>

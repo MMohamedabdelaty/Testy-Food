@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        li {
+            line-height: 32px;
+            list-style-position: outside;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>What is Array in JavaScript </h1>
+        <p>An array is a special variable, which can hold more than one value.</p>
+        <p id="student"></p>
+        <p id="students"></p>
+        <p id="cars"></p>
+    </div>
+    <script>
+        //Define variables first
+        let student1 = "Shehab"
+        let student2 = "Ahmed"
+        let student3 = "Sayed"
+        let student4 = "Sara"
+        let student5 = "Mona"
+        let student6 = "Ali"
+        document.getElementById("student").innerHTML = student1
+        document.getElementById("student").innerHTML = student2
+        document.getElementById("student").innerHTML = student3
+        document.getElementById("student").innerHTML = student4
+        document.getElementById("student").innerHTML = student5
+        document.getElementById("student").innerHTML = student6
+        document.getElementById("student").innerHTML = student1
+        document.getElementById("student").innerHTML += student2
+        document.getElementById("student").innerHTML += student3
+        document.getElementById("student").innerHTML += student4
+        document.getElementById("student").innerHTML += student5
+        document.getElementById("student").innerHTML += student6
+
+        //Use array
+        //declaring of an array syntax 1
+        let students = ["Shehab", "Ahmed", "Sayed", "Sara", "Mona", "Ali"]
+        document.getElementById("students").innerHTML = students
+
+        //declaring of an array syntax 2
+        const cars = new Array('Mercedes ', 'Porsche', 'Audi', "Honda", "Volvo", "BMW");
+        document.getElementById("cars").innerHTML = cars
+
+        //Arrays proberties
+        //items start with 0
+        console.log(students[0])
+        console.log(students.length)
+        console.log(students[students.length - 1]) // to log the last value in array
+        students[3] = "Saber" // to replace the value number 4 by a new value
+        console.log(students)
+        const mix = [student1, true, 40, cars] // we can add all data types in an Array even variable and arrays
+        console.log(mix)
+
+        //Arrays methods
+        //Add elements
+        students.push('Aya') // push method add element to the end of an array
+        console.log(students)
+        students.unshift('Menna') // unshift method add element to the start of an array
+        console.log(students)
+
+        //Remove elements
+        students.pop() // pop method remove element from the end of an array
+        students.pop() // repeat to remove another element from the end of an array
+        console.log(students)
+        students.shift() // shift method remove element from the start of an array
+        console.log(students)
+
+        console.log(students.indexOf("Sayed")) // to know the element order in an array
+        console.log(students.includes("Sayed")) // to know if the element exist in an array
+        console.log(students.includes("Messi")) // to know if the element exist in an array
+
+        //Remove, Add or replace elements
+        students.splice(2, 0, 'Messi')
+        console.log(students)
+
+        //To find out the array legnth and to log the last value
+        console.log(students.length)
+        console.log(students[students.length - 1])
+
+        //We can call a variable or an array inside array
+        let birthYear = 2000
+
+        //Reverse
+        console.log(students.reverse())
+    </script>
+</body>
+
+</html>

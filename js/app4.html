@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application number 4 (switch case)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        div.message {
+            background-color: lightblue;
+            font-size: 24px;
+            color: green;
+            padding: 16px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Application number 4 (switch case)</h1>
+        <h3>Select your education degree</h3>
+        <select name="" id="edu-degree">
+            <option value="" disabled selected>Choose Yes or No</option>
+            <option value="university">University</option>
+            <option value="secondary">Secondary school</option>
+            <option value="preparatory">Preparatory school</option>
+            <option value="primary">Primary school</option>
+        </select>
+        <br><br><button id="check">Check available jobs</button>
+        <div class="message">
+            <h4>The available jobs for you are:</h4>
+            <ul id="message"></ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById("check").addEventListener("click", function () {
+            document.getElementById("message").innerHTML = ``;
+            let educationDgree = document.getElementById("edu-degree").value
+            switch (educationDgree) {
+                case 'university':
+                    document.getElementById("message").innerHTML = `<li>Doctor</li><li>Engineer</li>`;
+                case 'secondary':
+                    document.getElementById("message").innerHTML += `<li>Nurse</li><li>Secretary</li>`;
+                case 'preparatory':
+                    document.getElementById("message").innerHTML += `<li>Assistant</li><li>Technician</li>`;
+                case 'primary':
+                    document.getElementById("message").innerHTML += `<li>Dancer</li><li>Tiktoker</li>`;
+            }
+        })
+    </script>
+</body>
+
+</html>

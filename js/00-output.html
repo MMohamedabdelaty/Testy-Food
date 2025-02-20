@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Output of JavaScript commands </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Welcome To JavaScript</h1>
+        <p id="show"></p>
+        <button onclick="alert(300);">Click here</button>
+        <script>
+            document.write('<p>Welcome to W3Docs!</p>');
+        </script>
+    </div>
+    <script>
+        //Writing into an HTML element
+        let price = 100;
+        document.getElementById("show").innerHTML = 50 + price;
+
+        //Writing into the HTML output
+        document.write(5 + 20);
+
+        //Writing into an alert box
+        window.alert(price);
+
+        //Writing into the browser console
+        console.log(price + 100);
+
+        //This code allow JS to replace the HTML Content
+        //document.body.innerHTML = 'New Content';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Introduction</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        div.apply {
+            border: solid 1px lightblue;
+            padding: 20px;
+            height: 300px;
+            display: flex;
+            gap: 64px;
+            margin-bottom: 32px;
+        }
+
+        div.left {
+            width: 320px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .relative {
+            position: relative;
+        }
+        .gedo {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Jquery Basics</h1>
+        <h2 id="one">What is Jquery?</h2>
+        <h2 id="two">How to include it in your HTML file?</h2>
+        <ol>
+            <li>Download the library to your computer</li>
+            <li>Use the CDN method</li>
+        </ol>
+        <h2 class="first">Selectors in Jquery (tag name - class name - ID)</h2>
+        <h2 class="second">Syntax and Selectors in Jquery</h2>
+        <h3>Let's do some fun by Jquery</h3>
+        <div class="apply">
+            <div class="left">
+                <h4>My first Jquery effect</h4>
+                <button onclick="fun1()">Fade in and out image</button>
+                
+            </div>
+            <img src="../images/jq.jpg" alt="" class="photo relative">
+        </div>
+    </div>
+
+</body>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+    //Test connection by first fun function
+   function fun1 () {
+    $(".photo").slideUp(1000).slideDown(1000).fadeOut(1000).fadeIn(1000)
+   }
+   var x = $("#two").text()
+   console.log(x)
+   $("#one").text("This is the new text")
+   $("h1").addClass("gedo")
+</script>
+
+</html>

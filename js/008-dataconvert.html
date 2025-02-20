@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Conversion and Coercion in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        li {
+            line-height: 32px;
+            list-style-position: outside;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Data Conversion and Coercion in JavaScript </h1>
+        <p>Simply data type <strong>conversion</strong> is when we <strong>manually</strong> convert from one data type
+            to another.</p>
+        <p>On the other hand data type <strong>coercion</strong> is when JavaScript <strong>automatically</strong>
+            convert types from
+            behind the scenes.
+        </p>
+        <p>Best practice advice is to keep JavaScript coercion but when you got wrong results, So you need to figure out
+            the data type causing the error and to convert it manually.</p>
+        <p></p>
+        <h2>The Truthy and Falsy Values</h2>
+        <p>The Falsy values are not exactly false but will become <strong>false</strong> when we convert them into a
+            Boolean and these
+            values in JavaScript are 5:</p>
+        <ol>
+            <li>0</li>
+            <li>'' or ""</li>
+            <li>undefined</li>
+            <li>null</li>
+            <li>Nan</li>
+        </ol>
+        <p>Any other values except the previous 5 are truthy and will become <strong>true</strong> when we convert them
+            into a Boolean
+        </p>
+    </div>
+    <script>
+        //Define variables as String then convert it to a Number
+        let x = '20'
+        let y = 40
+        console.log(x + y) // JS will concatonate the 2 values
+        console.log(Number(x) + y) // x will be convertd into number 
+
+
+        //Examples of JS coercion
+        console.log('She is ' + 25 + ' years old') //JS + operator converted the Number to a String automatically
+        console.log('50' - 25 - '10') //JS - operator converted the String to a Number automatically
+        console.log('50' + 25 + '10') //Instead if we changed the - operator to + it will do the opposite
+        console.log('50' * '10') //the * operator will convert the String into a Number
+        console.log('50' / '10') //the / operator will convert the String into a Number
+
+
+        //Guess the result
+        let z = '2' + 2
+        z = z - 7
+        console.log(z)
+        console.log(3 + 3 + 3 + '3')
+        console.log('3' - 3 + 3 + '3')
+
+        //Falsy values 
+        console.log(Boolean(0))
+        console.log(Boolean(''))
+        console.log(Boolean(undefined))
+        console.log(Boolean(null))
+        console.log(Boolean(NaN))
+
+        //Truthy values
+        console.log(Boolean('Shehab'))
+        console.log(Boolean(1))
+
+        //Examples to show how JS convert values to true or false
+        let money = 0 //When we change 0 into any truthy value the first message will be shown in console
+        if (money) {
+            console.log("Don't spend all your money")
+        } else {
+            console.log("You have to earn some money")
+        }
+    </script>
+</body>
+
+</html>

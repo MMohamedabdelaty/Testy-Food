@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        li {
+            line-height: 32px;
+            list-style-position: outside;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>What is an Operator in JavaScript</h1>
+        <p>Simply an operator in JS allows us to transform values or combine multiple values</p>
+        <p>There are many categories of operators in JavaScript such as:</p>
+        <ul>
+            <li>Mathematical Operators</li>
+            <li>Assignment Operators</li>
+            <li>Comparison Operators <br> (Basically we use them to produce Boolean values)</li>
+            <li>Equality and Inequality Operators <br> Don't rely on the double equal operator</li>
+            <li>Logical Operators</li>
+        </ul>
+    </div>
+    <script>
+        //Mathematical Operators (+ , - , * , /)
+        const currentYear = 2024;
+        const aliBirthYear = 2000;
+        const monaBirthYear = 2005;
+        const aliAge = currentYear - aliBirthYear;
+        const monaAge = currentYear - monaBirthYear;
+        console.log(aliAge, monaAge)
+        console.log(aliAge - monaAge, aliAge + monaAge, (aliAge + monaAge) / 2)
+        //We can use the + operator to join strings
+        //we call this Concatenation (combine strings together or strings with number)
+        const firstName = "Shehab"
+        const lastName = "Mahrous"
+        console.log(firstName + " " + lastName)
+        console.log(firstName + 10)
+        console.log(firstName / 10)
+
+        //Assignment Operators (= , ++, -- , += , -= , *= , /=)
+        let x = 8;
+        //x++
+        //x--
+        //x += 2
+        //x -= 2
+        //x *= 2
+        x /= 2
+        console.log(x)
+
+        //Comparison Operators (> , < , >= , <=)
+        //Use if else to explain
+        //else is optional
+        const legalAge = 21
+        if (aliAge >= legalAge) {
+            console.log("Ali can have a driving licence 🚔🚘")
+        } else {
+            console.log("Ali didn't reach the legal age yet 🚲🛴")
+        }
+
+        if (monaAge >= legalAge) {
+            console.log("Mona can have a driving licence 🚔🚘")
+        } else {
+            console.log("Mona didn't reach the legal age yet 🚲🛴")
+        }
+
+        //Equality and Inequality Operators (==, === , != , !==)
+        let xNumber = 25
+        let xString = '25'
+        console.log(xNumber == xString) //Loose
+        console.log(xNumber === xString) //Strict
+        console.log(xNumber === Number(xString)) //Strict
+        console.log(xNumber != xString)
+        console.log(xNumber !== xString)
+
+        //Using prompt function
+        // let userAge = prompt('What is your age?');
+        // if (userAge >= legalAge) {
+        //     console.log("You can have a driving licence 🚔🚘")
+        // } else {
+        //     console.log("You didn't reach the legal age yet 🚲🛴")
+        // }
+
+        //Boolean logical operators
+        //and && - or || - not !
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #content {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    li {
+      line-height: 32px;
+      list-style-position: outside;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Variables in JavaScript </h1>
+    <ul>
+      <li>var - let - const</li>
+      <li>Global and Local Variables</li>
+      <li>Variables naming rules and best practice of naming</li>
+    </ul>
+  </div>
+  <script>
+    // String Value must be between double or single quotes
+    let name = "Shehab";
+    // Number Value without any quotes
+    let age = 40;
+    // Explain the Scope (Global and Local)
+    var globalVar = "Accessible Everywhere";
+    function testScope() {
+      let localVar = "Accessible Only Inside this Function";
+      console.log(globalVar); // Works
+      console.log(localVar); // Works
+    }
+    console.log(globalVar);
+  </script>
+</body>
+
+</html>

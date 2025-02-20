@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application number 3 (Arrays)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        li {
+            line-height: 32px;
+            list-style-position: outside;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Application number 3 (Arrays)</h1>
+        <input type="text" id="new-student">
+        <button id="add-student">Add Student to List</button>
+        <div id="students-list"></div><br>
+    </div>
+    <script>
+        const studentsList = []
+        function addStudentName() {
+            let studentName = document.getElementById("new-student").value
+            studentsList.push(studentName)
+            document.getElementById("students-list").innerHTML = `${studentsList}`
+            studentName = document.getElementById("new-student").value = ""
+        }
+        document.getElementById("add-student").addEventListener("click", addStudentName)
+    </script>
+</body>
+
+</html>
